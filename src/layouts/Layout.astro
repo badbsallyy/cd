@@ -1,0 +1,106 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = "Aura | AI Website Builder – No Code, No Design Skills",
+  description = "AI landing page builder that creates stunning designs in seconds. No design skills needed. Export to HTML & Figma. Trusted by 65,000+ users worldwide.",
+  ogImage = "https://aura.build/share-preview.jpg"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="trustpilot-one-time-domain-verification-id" content="e7fde8c5-aaf9-473a-b59e-d1f4a8847cd8">
+    <meta name="description" content={description}>
+    <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aura">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content={ogImage}>
+    <meta property="og:url" content="https://aura.build/">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@mengto">
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content={ogImage}>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2M6V79H761"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-2M6V79H761");
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/logo-aura.svg">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+    <!-- Iconify Icon Web Component -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --color-primary: #6366f1;
+    --color-primary-dark: #4f46e5;
+    --color-background: #0f0f0f;
+    --color-surface: #1a1a1a;
+    --color-text: #ffffff;
+    --color-text-secondary: #a1a1aa;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-family);
+    background: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+</style>

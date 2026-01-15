@@ -1,0 +1,326 @@
+---
+---
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="badge">
+      <span class="badge-icon">✨</span>
+      <span>Trusted by 65,000+ users worldwide</span>
+    </div>
+    <h1 class="hero-title">
+      Build stunning websites with
+      <span class="gradient-text">AI magic</span>
+    </h1>
+    <p class="hero-description">
+      Create beautiful landing pages in seconds. No design skills needed.
+      Export to HTML & Figma with just one click.
+    </p>
+    <div class="hero-actions">
+      <a href="#get-started" class="btn btn-primary">
+        Get Started Free
+        <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+      </a>
+      <a href="#demo" class="btn btn-secondary">
+        <iconify-icon icon="solar:play-linear"></iconify-icon>
+        Watch Demo
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-number">65K+</div>
+        <div class="stat-label">Active Users</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">150K+</div>
+        <div class="stat-label">Pages Created</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">4.9/5</div>
+        <div class="stat-label">User Rating</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="floating-card card-1">
+      <iconify-icon icon="solar:pallete-2-bold-duotone"></iconify-icon>
+      <span>AI Design</span>
+    </div>
+    <div class="floating-card card-2">
+      <iconify-icon icon="solar:code-bold-duotone"></iconify-icon>
+      <span>Export HTML</span>
+    </div>
+    <div class="floating-card card-3">
+      <iconify-icon icon="solar:figma-bold-duotone"></iconify-icon>
+      <span>Figma Ready</span>
+    </div>
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    text-align: center;
+    z-index: 2;
+    animation: fadeInUp 1s ease-out;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+    animation: slideDown 0.8s ease-out 0.2s backwards;
+  }
+
+  .badge-icon {
+    font-size: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    animation: slideDown 0.8s ease-out 0.3s backwards;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-description {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-text-secondary);
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    animation: slideDown 0.8s ease-out 0.4s backwards;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+    animation: slideDown 0.8s ease-out 0.5s backwards;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.4);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-out 0.6s backwards;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-top: 0.25rem;
+  }
+
+  .hero-visual {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .floating-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .floating-card iconify-icon {
+    font-size: 1.5rem;
+  }
+
+  .card-1 {
+    top: 20%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .card-2 {
+    top: 30%;
+    right: 15%;
+    animation: float 7s ease-in-out infinite 1s;
+  }
+
+  .card-3 {
+    bottom: 25%;
+    left: 15%;
+    animation: float 8s ease-in-out infinite 2s;
+  }
+
+  .gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  .orb-1 {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    top: 10%;
+    right: 10%;
+  }
+
+  .orb-2 {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+    bottom: 15%;
+    left: 5%;
+    animation-delay: 2s;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.5;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 4rem 1rem;
+    }
+
+    .floating-card {
+      display: none;
+    }
+
+    .gradient-orb {
+      width: 250px;
+      height: 250px;
+    }
+
+    .hero-stats {
+      gap: 1.5rem;
+    }
+  }
+</style>
